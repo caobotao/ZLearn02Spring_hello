@@ -1,10 +1,14 @@
 package com.cbt.bean;
 
 public class Hello {
-	private String username;
+	private String name;
 
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUsername(String name) {
+	    this.name = name;
 	}
 	
+	public void show(){
+	    System.out.println("hello," + name);
+	}
+
 }
