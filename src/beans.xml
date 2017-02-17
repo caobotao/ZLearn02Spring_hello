@@ -4,7 +4,10 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 	<!-- bean就是java对象，有spring创建和管理 -->
-	<bean id="hello" class="com.cbt.bean.Hello">
-		<property name="name" value="张三"></property>
+	<bean id="mysqlDao" class="com.cbt.dao.impl.UserDaoMysqlImpl"></bean>
+	<bean id="oracleDao" class="com.cbt.dao.impl.UserDaoOracleImpl"></bean>
+	
+	<bean id="userService" class="com.cbt.service.impl.UserServiceImpl">
+		<property name="userDao" ref="mysqlDao"></property>
 	</bean>
 </beans>
